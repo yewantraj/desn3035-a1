@@ -29,6 +29,7 @@
                     </ul>
                 </nav>
                 <img src="images/cart.png" alt="cart" width="30px" height="30px" />
+                <img src="images/menu.png" class="menu-icon" alt="menu" onclick="toggleMenu()">
             </div>
             <div class="row">
                 <div class="col-2">
@@ -187,6 +188,22 @@
             <p class="copyright">Copyright 2024 - Fit2Vouge</p>
         </div>
     </div>
+
+    <!-------js for toggle menu -------->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.naxHeight = "0px";
+            }
+        }
+    </script>
 </body>
 
 </html>
