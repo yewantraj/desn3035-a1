@@ -557,7 +557,7 @@ ul {
   }
 
   .card {
-    width: 50%;
+    width: 100%;
   }
 
   .banner {
@@ -588,5 +588,9 @@ ul {
   .col-3,
   .col-4 {
     flex-basis: 100%;
+  }
+
+  .card {
+    width: 100%;
   }
 }
