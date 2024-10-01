@@ -47,29 +47,82 @@ body {
   padding: 20px 0px;
 }
 
+.navbar .logo h2 {
+  font-size: 24px;
+  color: #ff523b;
+  margin: 0;
+  text-decoration: none;
+}
+
 nav {
   flex: 1;
   text-align: right;
 
 }
 
-nav ul {
+.navbar nav ul {
   display: inline-block;
   list-style-type: none;
 }
 
-nav ul li {
+.navbar nav ul li {
   display: inline-block;
   margin-right: 20px;
 }
 
-a {
+.navbar nav ul li a {
   text-decoration: none;
-  color: #555;
+  color: #333;
+  font-weight: 500;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Adding After Pseudo-Element for Hover Effect */
+.navbar nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background-color: #ff5252;
+  left: 50%;
+  bottom: 0;
+  transition: width 0.3s ease, left 0.3s ease;
 }
 
 p {
   color: #555;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Hover Effect for Navbar Items with After Element */
+.navbar nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar nav ul li a:hover {
+  color: #ff5252;
+}
+
+/* Active Link Style */
+.navbar nav ul li a.active {
+  color: #ff5252;
+}
+
+.navbar nav ul li a.active::after {
+  width: 100%;
+  left: 0;
+}
+
+
+.navbar img {
+  cursor: pointer;
+  margin-left: 20px;
 }
 
 .row {
@@ -407,6 +460,10 @@ small {
   color: #8a8a8a;
   font-size: 14px;
   padding: 60px 0 20px;
+}
+
+.footer a {
+  color: #8a8a8a;
 }
 
 .footer p {
