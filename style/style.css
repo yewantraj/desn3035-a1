@@ -8,6 +8,11 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+.d-flex {
+  display: flex;
+  align-items: center;
+}
+
 .header {
   background: radial-gradient(#fff, #ffd6d6);
 }
@@ -23,15 +28,29 @@ body {
   padding-right: 25px;
 }
 
+.product-container {
+  max-width: 1300px;
+  margin: auto;
+  margin-top: -50px;
+  margin-bottom: 50px;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.product-container .row {
+  background: radial-gradient(#fff, #ffd6d6);
+}
+
 .navbar {
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 20px 0px;
 }
 
 nav {
   flex: 1;
   text-align: right;
+
 }
 
 nav ul {
@@ -105,15 +124,62 @@ p {
   background: #563434;
 }
 
+.view_all {
+  margin: 0px auto;
+  text-align: center;
+
+}
+
+.btn-container {
+  display: flex;
+  /* Use flexbox to align the input and button side by side */
+  align-items: center;
+  margin-top: 30px;
+}
+
+.quantity-input {
+  width: 60px;
+  /* Control the size of the input */
+  padding: 8px;
+  margin-left: 5px;
+  margin-right: 20px;
+  /* Space between the input and the button */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  /* Center the number inside the input */
+  font-size: 16px;
+}
+
+.btn-cart {
+  display: inline-flex;
+  align-items: center;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.btn-cart i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btn-cart:hover {
+  background: #563434;
+}
+
 .categories {
   margin: 70px 0;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 20px;
-  gap: 10px;
+
 }
 
 .small-container {
@@ -126,7 +192,7 @@ p {
 .card {
   padding: 20px;
   border: 1px solid #ccc;
-  margin: 10px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   width: 300px;
   text-align: center;
@@ -215,6 +281,7 @@ p {
   width: auto;
   overflow: hidden;
   height: 500px;
+  padding-top: 60px;
 }
 
 h4 {
@@ -243,6 +310,94 @@ h4 {
 
 small {
   color: #555;
+}
+
+/* Pagination styles */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  margin: 0 4px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+  border-radius: 5px;
+}
+
+/* Active page */
+.pagination a.active {
+  background-color: #ff523b;
+  color: white;
+  border: 1px solid #ff523b;
+}
+
+/* Hover effect */
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+/* Arrow hover */
+.pagination a:hover {
+  color: white;
+  background-color: #ff523b;
+}
+
+/* Row Styles */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+/* Column Styles */
+.col-4 {
+  flex: 0 0 25%;
+  /* Each column takes up 25% of the row width */
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 992px) {
+  .col-4 {
+    flex: 0 0 50%;
+    /* On medium screens, columns take 50% of the row width */
+  }
+}
+
+@media (max-width: 768px) {
+  .col-4 {
+    flex: 0 0 100%;
+    /* On small screens, columns take 100% of the row width */
+  }
+}
+
+
+.search-sort {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+}
+
+#search-input {
+  padding: 10px;
+  width: 40%;
+  border: 1px solid #000000;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#sort-select {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
 }
 
 /*--------- footer ---------*/
@@ -310,7 +465,7 @@ ul {
 
 .page-heading,
 .page-heading>.small-container>.row {
-  height: 40vh;
+  height: 35vh;
   /*min-height: 200px;*/
 
 
@@ -358,6 +513,19 @@ ul {
   font-weight: 400;
 }
 
+/* bootstrap css */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  flex: 1;
+  padding-right: 15px;
+  padding-left: 15px;
+}
 
 /*---------- media query for menu ----------*/
 
@@ -387,6 +555,14 @@ ul {
     display: block;
     cursor: pointer;
   }
+
+  .card {
+    width: 50%;
+  }
+
+  .banner {
+    display: none;
+  }
 }
 
 @media (min-width: 768px) {
@@ -414,4 +590,3 @@ ul {
     flex-basis: 100%;
   }
 }
-

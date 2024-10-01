@@ -27,13 +27,12 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Contact</a></li>
-                        <li><a href="">Account</a></li>
                     </ul>
                 </nav>
                 <img src="images/cart.png" alt="cart" width="30px" height="30px" />
                 <img src="images/menu.png" class="menu-icon" alt="menu" onclick="toggleMenu()">
             </div>
-            <div class="row">
+            <div class="d-flex">
                 <div class="col-2">
                     <h1>Give your Workout<br />A New Style!</h1>
                     <p>
@@ -42,7 +41,7 @@
                     </p>
                     <a href="products.html" class="btn">Explore Now &#8594;</a>
                 </div>
-                <div class="col-2">
+                <div class="col-2 banner">
                     <img src="images/image1.png" alt="bg" />
                 </div>
             </div>
@@ -50,25 +49,26 @@
     </div>
 
     <!----- featured categories ----->
-
-    <div class="categories">
-        <div class="card">
-            <img src="images/category-1.jpg" alt="">
-            <h2>Clothing</h2>
-        </div>
-        <div class="card">
-            <img src="images/category-2.jpg" alt="">
-            <h2>Footwear</h2>
-        </div>
-        <div class="card">
-            <img src="images/category-3.jpg" alt="">
-            <h2>Supplements</h2>
+    <div class="container">
+        <div class="categories">
+            <div class="card">
+                <img src="images/category-1.jpg" alt="">
+                <h2>Clothing</h2>
+            </div>
+            <div class="card">
+                <img src="images/category-2.jpg" alt="">
+                <h2>Footwear</h2>
+            </div>
+            <div class="card">
+                <img src="images/category-3.jpg" alt="">
+                <h2>Supplements</h2>
+            </div>
         </div>
     </div>
 
     <!----- featured products ----->
 
-    <div class="small-container">
+    <div class="container">
         <h2 class="title">Featured Products</h2>
         <div class="row">
             <div class="col-4">
@@ -161,7 +161,10 @@
                 </a>
             </div>
         </div>
-        <a href="products.html" class="btn1">View All &#8594;</a>
+        <div class="view_all">
+            <a href="products.html" class="btn1">View All &#8594;</a>
+        </div>
+
     </div>
     <!----- sale ----->
     <div class="sale">

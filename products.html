@@ -27,7 +27,6 @@
                         <li><a href="products.html">Products</a></li>
                         <li><a href="">About</a></li>
                         <li><a href="">Contact</a></li>
-                        <li><a href="">Account</a></li>
                     </ul>
                 </nav>
                 <img src="images/cart.png" alt="cart" width="30px" height="30px" />
@@ -47,12 +46,21 @@
         </div>
     </div>
 
-
-    <!----- featured products ----->
+    <!-- Search and Sorting -->
+    <div class="container">
+        <div class="search-sort">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <select id="sort-select">
+                <option value="default">Sort by</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+            </select>
+        </div>
+    </div>
 
     <div class="container">
-
-
         <div class="row">
             <div class="col-4">
                 <a href="product-detail.html">
@@ -64,8 +72,8 @@
             <div class="col-4">
                 <a href="product-detail.html">
                     <img src="images/product-2.jpg" alt="" />
-                    <h4>Red Printed Tshirt</h4>
-                    <p>$15.99</p>
+                    <h4>Black Pant</h4>
+                    <p>$17.99</p>
                 </a>
             </div>
             <div class="col-4">
@@ -115,6 +123,22 @@
         </div>
     </div>
 
+    <div class="page-container">
+        <div class="row">
+            <!-- Product rows as you have in your code -->
+        </div>
+
+        <!-- Pagination Section -->
+        <div class="pagination">
+            <a href="#">&laquo;</a>
+            <a href="#">1</a>
+            <a href="#" class="active">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">&raquo;</a>
+        </div>
+    </div>
 
     <!----- footer ----->
     <div class="footer">
@@ -149,6 +173,7 @@
             <p class="copyright">&copy; Copyright 2024 - Fit2Vouge</p>
         </div>
     </div>
+
     <!-------js for toggle menu -------->
     <script>
         var MenuItems = document.getElementById("MenuItems");
