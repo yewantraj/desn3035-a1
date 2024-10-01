@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fit2Vouge</title>
+    <link rel="stylesheet" href="style/style.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div class="header" id="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <!-- <img src="images/logo.png" width="125px" alt=""> -->
+                    <a href="index.html"><h2>Fit2Vouge</h2></a>
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/cart.png" alt="cart" width="30px" height="30px" />
+                <img src="images/menu.png" class="menu-icon" alt="menu" onclick="toggleMenu()">
+            </div>
+
+        </div>
+    </div>
+    <div class="page-heading">
+        <div class="container">
+            <div class="header-contain">
+                <div class="">
+                    <h1>Product</h1>
+                    <p class=""><a href="index.html">Home</a> / <strong>Products</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- featured products ----->
+
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-1.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-2.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-3.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-4.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-1.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-2.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-3.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+            <div class="col-4">
+                <a href="product-detail.html">
+                <img src="images/product-4.jpg" alt="" />
+                <h4>Red Printed Tshirt</h4>
+                <p>$15.99</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!----- footer ----->
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <!-- <img src="images/logo.png" alt=""> -->
+                    <h2>Fit2Vouge</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique praesentium repudiandae saepe
+                        illo consequatur quia</p>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#">Cart</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">Blog Post</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                        <li><a href="https://x.com/?lang=en">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">&copy; Copyright 2024 - Fit2Vouge</p>
+        </div>
+    </div>
+     <!-------js for toggle menu -------->
+     <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function toggleMenu() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+</body>
+
+</html>
