@@ -41,6 +41,76 @@ body {
   background: radial-gradient(#fff, #ffd6d6);
 }
 
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.col-6 {
+  flex-basis: 50%;
+  padding: 10px;
+  min-width: 200px;
+  margin-bottom: 50px;
+  text-align: center;
+  transition: transform 0.5s;
+}
+
+.col-6 img {
+  width: auto;
+  overflow: hidden;
+  height: 500px;
+  padding-top: 60px;
+}
+
+.detail-data p,
+.detail-data h2 {
+  text-align: left;
+}
+
+.price {
+  font-weight: 700;
+}
+
+.price del {
+  font-weight: 400;
+}
+
+.quantity-input {
+  width: 60px;
+  /* Control the size of the input */
+  padding: 8px;
+  margin-left: 5px;
+  margin-right: 20px;
+  /* Space between the input and the button */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  /* Center the number inside the input */
+  font-size: 16px;
+}
+
+.btn-cart {
+  display: inline-flex;
+  align-items: center;
+  background: #ff523b;
+  color: #fff;
+  padding: 8px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.5s;
+}
+
+.btn-cart i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.btn-cart:hover {
+  background: #563434;
+}
+
+
 .navbar {
   display: flex;
   align-items: center;
@@ -190,41 +260,6 @@ a {
   margin-top: 30px;
 }
 
-.quantity-input {
-  width: 60px;
-  /* Control the size of the input */
-  padding: 8px;
-  margin-left: 5px;
-  margin-right: 20px;
-  /* Space between the input and the button */
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-  /* Center the number inside the input */
-  font-size: 16px;
-}
-
-.btn-cart {
-  display: inline-flex;
-  align-items: center;
-  background: #ff523b;
-  color: #fff;
-  padding: 8px 30px;
-  font-size: 16px;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: background 0.5s;
-}
-
-.btn-cart i {
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-.btn-cart:hover {
-  background: #563434;
-}
-
 .categories {
   margin: 70px 0;
   display: flex;
@@ -314,28 +349,7 @@ a {
   width: 100%;
 }
 
-.img-fluid {
-  max-width: 100%;
-  height: auto;
-}
 
-.col-6 {
-  flex-basis: 50%;
-  padding: 10px;
-  min-width: 200px;
-  margin-bottom: 50px;
-  text-align: center;
-  transition: transform 0.5s;
-}
-
-
-
-.col-6 img {
-  width: auto;
-  overflow: hidden;
-  height: 500px;
-  padding-top: 60px;
-}
 
 h4 {
   color: #555;
@@ -453,6 +467,27 @@ small {
   font-size: 16px;
 }
 
+/* Back to Top Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background-color: #ff523b;
+  color: #fff;
+  padding: 5px 16px;
+  border-radius: 100%;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+}
+
+#back-to-top:hover {
+  background-color: #563434;
+}
+
+
 /*--------- footer ---------*/
 
 .footer {
@@ -557,18 +592,7 @@ ul {
 }
 
 
-.detail-data p,
-.detail-data h2 {
-  text-align: left;
-}
 
-.price {
-  font-weight: 700;
-}
-
-.price del {
-  font-weight: 400;
-}
 
 /* bootstrap css */
 .row {
@@ -751,9 +775,24 @@ ul {
   }
 
   .col-6 {
-    flex-basis: 50%;
+    flex-basis: 100%;
+    margin-bottom: 30px;
   }
 
+  .col-6 img {
+    height: 400px;
+    padding-top: 30px;
+  }
+
+  .quantity-input {
+    width: 50px;
+    font-size: 14px;
+  }
+
+  .btn-cart {
+    padding: 8px 25px;
+    font-size: 15px;
+  }
 
   .contact-container .col-6 {
     flex: 0 0 100%;
@@ -789,12 +828,54 @@ ul {
   }
 }
 
+/*---------- media query for product detail page less than 480px screen size ----------*/
 
-/* @media (max-width: 767.98px) {
+@media (max-width: 480px) {
+  .product-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
   .col-6 {
     flex-basis: 100%;
+    padding: 0;
+    margin-bottom: 20px;
   }
-} */
+
+  .col-6 img {
+    height: 300px;
+    padding-top: 20px;
+  }
+
+  .detail-data p,
+  .detail-data h2 {
+    text-align: center;
+  }
+
+  .price {
+    text-align: center;
+  }
+
+  .quantity-input {
+    width: 40px;
+    font-size: 14px;
+    padding: 6px;
+  }
+
+  .btn-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn-cart {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
 
 /*---------- media query for less than 600px screen size ----------*/
 
@@ -802,6 +883,7 @@ ul {
   .row {
     text-align: center;
   }
+
   .logo h2 {
     font-size: 20px;
   }
@@ -809,6 +891,7 @@ ul {
   .navbar nav ul li a {
     font-size: 14px;
   }
+
   .col-2,
   .col-3,
   .col-4 {
@@ -821,7 +904,8 @@ ul {
 
   .menu-icon {
     align-self: flex-end;
-}
+  }
+
   .about-content h2 {
     font-size: 24px;
     text-align: center;
