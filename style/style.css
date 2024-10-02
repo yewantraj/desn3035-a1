@@ -488,6 +488,46 @@ small {
 }
 
 
+/* Base Size Selection Styling */
+.size-selection {
+  margin: 15px 0;
+  font-family: 'Poppins', sans-serif;
+  text-align: left;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.size-selection label {
+  font-weight: 500;
+  margin-right: 10px;
+  font-size: 16px;
+  display: inline-block;
+}
+
+.size-dropdown {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 150px;
+  background-color: #f9f9f9;
+  outline: none;
+  transition: border-color 0.3s ease-in-out;
+  display: inline-block;
+}
+
+/* Hover and Focus */
+.size-dropdown:hover, 
+.size-dropdown:focus {
+  border-color: #333;
+}
+
+
+
+
+
+
 /*--------- footer ---------*/
 
 .footer {
@@ -826,6 +866,35 @@ ul {
   .search-sort select {
     margin-bottom: 0;
   }
+
+  .size-selection {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .size-selection label {
+      margin-bottom: 10px;
+  }
+
+  .size-dropdown {
+      width: 100%;
+  }
+
+  .btn-container {
+      flex-direction: column;
+      align-items: flex-start;
+  }
+
+  .btn-container a {
+      margin-top: 15px;
+      width: 100%;
+      text-align: center;
+  }
+
+  .quantity-input {
+      width: 100%;
+      margin-top: 10px;
+  }
 }
 
 /*---------- media query for product detail page less than 480px screen size ----------*/
@@ -875,7 +944,22 @@ ul {
     font-size: 16px;
     margin-top: 10px;
   }
+
+  .size-selection label {
+      font-size: 14px;
+  }
+
+  .size-dropdown {
+      padding: 6px 10px;
+      font-size: 13px;
+  }
+
+  .btn-cart {
+      padding: 12px;
+      font-size: 14px;
+  }
 }
+
 
 /*---------- media query for less than 600px screen size ----------*/
 
